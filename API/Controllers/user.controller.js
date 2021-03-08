@@ -2,7 +2,7 @@ const User = require('../Models/user.model');
 const mongoose = require('mongoose');
  const bcrypt  = require('bcrypt');
 const jwt      = require('jsonwebtoken');
-const verify_token = require('../Middlewares/token-verify');
+
 const key = require('../../nodemon.json');
 // const nodemailer = require('nodemailer');
  // const hbs = require('nodemailer-express-handlebars');
@@ -259,59 +259,10 @@ exports.update_userbyId = (req, res, next) => {
        })
    })
 }
-exports.verify_tokenUser = verify_token;
-exports.mail = (req,res,next) =>{
-    try{
-        const to = req.body.to;
-        const subject = req.body.subject;
-        const text = req.body.text;
-        const html = req.body.html;
-        let transporter = nodemailer.createTransport({
-            service:'gmail',
-            auth:{
-                'user':'patanyusufkhan222@gmail.com',
-                'pass':'@likh@n@123$'
-            }
-        });
-        
-        transporter.use('compile', hbs({
-            viewPath:viewPath,
-            viewEngine:'express-handlebars'
-        }));
-        //send mail with options
-        var mail = {
-           from: 'from@domain.com',
-           to: 'to@domain.com',
-           subject: 'Test',
-           template: 'home',
-           context: {
-               name: 'Name'
-           }
-        }
-        transporter.sendMail(mail);
-         
-    } catch(error){
-           return res.status(401).json({
-               message:"Mail Fail",
-               error:error
-           })
-    }
-
-};
-exports.rendertemplate = (req,res,next)=>{
-    res.render("home");
-}
-exports.getRefferalOfUser = async (req,res,next)=>{
-    const id = req.params.referralid;
-     try {
-            const count = await User.find({refferal:id}).count();
-            res.status(200).json(count);
-     }catch (error){
-        res.status(404)
-        res.send({ error:error });
-     }
 
 
 
 
-}
+
+
+
