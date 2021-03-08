@@ -11,7 +11,7 @@ if(req.method === 'OPTIONS'){
     res.header('Access-Control-Allow-Methods','PUT,PATCH,POST,GET,DELETE');
     return res.status(200).json({});
 }
-next()
+next();
 });
 
 app.use('/users',userRoutes);
