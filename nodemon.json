@@ -1,0 +1,10 @@
+{
+    "env" : {
+        "MONGO_ATLAS_PW": "@likh@n@123$",
+        "JWT_KEY":"#IAm_Developer",
+        "MAP_MY_INDIA_API_KEY":"mgk8rufrzt21rqci7zpfvjxkt81rf9ed",
+        "latitude":"14.0230804",
+        "longitude":"78.5033571"
+        
+    }
+}
