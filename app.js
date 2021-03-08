@@ -15,8 +15,6 @@ if(req.method === 'OPTIONS'){
 });
 
 app.use('/users',userRoutes);
-app.use((req,res,next)=>{
-res.status(200).json({message:'listening'});
-});
+
 
 module.exports = app;
