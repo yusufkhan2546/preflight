@@ -9,7 +9,7 @@ const app = express();
  const restaurentRoutes = require('./API/Routes/restaurent.routes');
  const foodItemRoutes = require('./API/Routes/fooditem.routes');
  const locationRoutes = require('./API/Routes/location.routes');
- const cartRoutes = require('./API/routes/cartitem.routes');
+ const cartRoutes = require('./API/Routes/cartitem.routes');
 
 
 
