@@ -6,7 +6,7 @@ module.exports =(req,res,next) =>{
     const longitude = req.params.longitude;
     const latitude = req.params.latitude;
     try{
-        https.get(`https://apis.mapmyindia.com/advancedmaps/v1/${key.env.MAP_MY_INDIA_API_KEY}/distance_matrix/driving/${key.env.longitude},${key.env.latitude};${key.env.longitude},${key.env.latitude}`, (resp) => {
+        https.get(`https://apis.mapmyindia.com/advancedmaps/v1/${key.env.MAP_MY_INDIA_API_KEY}/distance_matrix/driving/${key.env.longitude},${key.env.latitude};${longitude},${latitude}`, (resp) => {
             let data = '';
             // A chunk of data has been received.
             resp.on('data', (chunk) => {
