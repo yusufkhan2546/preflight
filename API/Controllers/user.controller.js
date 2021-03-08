@@ -2,12 +2,11 @@ const User = require('../Models/user.model');
 const mongoose = require('mongoose');
  const bcrypt  = require('bcrypt');
 const jwt      = require('jsonwebtoken');
-
 const key = require('../../nodemon.json');
 // const nodemailer = require('nodemailer');
  // const hbs = require('nodemailer-express-handlebars');
-var path = require('path');
-var viewPath = path.join(__dirname, '/views');
+
+
 
 
 //routes handler middlewares
